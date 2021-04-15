@@ -1,6 +1,7 @@
 import React from "react";
+import ProjectOfficeShow from "./ProjectOfficeShow";
 
-class SetString extends React.Component {
+class ProjetOfficeInput extends React.Component {
   state = { stackId: null };
 
   handleKeyDown (e, methodName) {
@@ -23,19 +24,19 @@ class SetString extends React.Component {
     this.setState({ stackId });
   };
 
-  getTxStatus = () => {
-    // get the transaction states from the drizzle state
-    const { transactions, transactionStack } = this.props.drizzleState;
+  // getTxStatus = () => {
+  //   // get the transaction states from the drizzle state
+  //   const { transactions, transactionStack } = this.props.drizzleState;
 
-    // get the transaction hash using our saved `stackId`
-    const txHash = transactionStack[this.state.stackId];
+  //   // get the transaction hash using our saved `stackId`
+  //   const txHash = transactionStack[this.state.stackId];
 
-    // if transaction hash does not exist, don't display anything
-    if (!txHash) return null;
+  //   // if transaction hash does not exist, don't display anything
+  //   if (!txHash) return null;
 
-    // otherwise, return the transaction status
-    return `Transaction status: ${transactions[txHash] && transactions[txHash].status}`;
-  };
+  //   // otherwise, return the transaction status
+  //   return `Transaction status: ${transactions[txHash] && transactions[txHash].status}`;
+  // };
 
   render() {
     return (
@@ -69,12 +70,18 @@ class SetString extends React.Component {
 				      <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setFloors')} />
             </div>
          </li>
+         <li className="list-group-item">
+            <div className="row">
+              <div className="col-6">Package: </div>{" "}
+				      <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setPackage')} />
+            </div>
+         </li>
        </ul>
-       <button className="btn btn-primary" type="submit">Submit</button>
+       <button className="btn btn-primary" type="submit" >Submit</button>
        </div>
      </div>
     );
   }
 }
 
-export default SetString;
+export default ProjetOfficeInput;

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import ProjectOffice from "./controllers/ProjectOffice";
-import SetString from "./controllers/SetString";
-import MaterialsProvider from "./controllers/MaterialsProvider";
-import Manufacturing from "./controllers/Manufacturing";
+import ProjectOfficeShow from "./controllers/ProjectOfficeShow";
+import ProjetOfficeInput from "./controllers/ProjetOfficeInput";
+import MaterialsProviderShow from "./controllers/MaterialsProviderShow";
+import MaterialsProviderInput from "./controllers/MaterialsProviderInput";
+import ManufacturingShow from "./controllers/ManufacturingShow.js";
+import ManufacturingInput from "./controllers/ManufacturingInput.js";
 import "./App.css";
 
 
@@ -57,26 +59,30 @@ class App extends Component {
     if (this.state.loading) return "Loading Drizzle...";
     return (			
     <div>
-      <nav className="navbar navbar-expand-sm bg-dark navbar-dark lg">
+      <nav className="navbarlg">
         <h1 className ="display-3">ROCKET ELEVATORS</h1>
       </nav>
       <div className="App">
-        <SetString
+        <ProjetOfficeInput
           drizzle={this.props.drizzle}
           drizzleState={this.state.drizzleState}
         />
-        <ProjectOffice
+        <ProjectOfficeShow
           drizzle={this.props.drizzle}
           drizzleState={this.state.drizzleState}
         /> 
-        <MaterialsProvider
+        <MaterialsProviderInput
           drizzle={this.props.drizzle}
           drizzleState={this.state.drizzleState}
-        />     
-       <Manufacturing
+        />    
+       <MaterialsProviderShow
           drizzle={this.props.drizzle}
           drizzleState={this.state.drizzleState}
-        />         
+        />   
+        <ManufacturingInput
+          drizzle={this.props.drizzle}
+          drizzleState={this.state.drizzleState}
+        />
       </div>
     </div> 
     );

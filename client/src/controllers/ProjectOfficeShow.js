@@ -1,6 +1,6 @@
 import React from "react";
 
-class Manufacturing extends React.Component {
+class ProjectOfficeShow extends React.Component {
   state = { dataKeyBattery: null,dataKeyColumns: null, dataKeyElevators: null, dataKeyFloors: null};
 
   componentDidMount() {
@@ -16,9 +16,15 @@ class Manufacturing extends React.Component {
     const dataKeyElevators = contract.methods["elevators"].cacheCall();
     const dataKeyFloors = contract.methods["floors"].cacheCall();
 
+
     // save the `dataKey` to local component state for later reference
     this.setState({ dataKeyBattery, dataKeyColumns, dataKeyElevators,dataKeyFloors});
   }
+
+  teste() {
+    alert("Teste");
+  };
+
 
   render() {
     // get the contract state from drizzleState
@@ -29,27 +35,27 @@ class Manufacturing extends React.Component {
     const columns = MyStringStore.columns[this.state.dataKeyColumns];
     const elevators = MyStringStore.elevators[this.state.dataKeyElevators];
     const floors = MyStringStore.floors[this.state.dataKeyFloors];
+
     
     // if it exists, then we display its value
     return (
       <div className="container">
         <table className="table">
           <thead>
-          
             <tr>
               <th scope="col">Controllers</th>
               <th scope="col">Shafts</th>
               <th scope="col">Doors</th>
               <th scope="col">Buttons</th>
+              <th scope="col">Display</th>
             </tr>
-            <button className="btn btn-primary" type="submit">Submit</button>
           </thead>
           <tbody>
             <tr>
               <td>{batteries && batteries.value}</td>
               <td>{columns && columns.value}</td>
-              <td>{batteries && batteries.value}</td>
-              <td>{columns && columns.value}</td>
+              <td>{elevators && elevators.value}</td>
+              <td>{floors && floors.value}</td>
             </tr>
           </tbody>
         </table>
@@ -58,4 +64,4 @@ class Manufacturing extends React.Component {
   }
 }
 
-export default Manufacturing;
+export default ProjectOfficeShow;

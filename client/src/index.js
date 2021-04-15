@@ -15,11 +15,11 @@ const options = {
 	web3: {
 		fallback: {
 			type: "ws",
-			url: "ws://127.0.0.1:9545",
+			url: "ws://127.0.0.1:9545 ",
 		},
 	},
 };
-
+//127.0.0.1:9545 truffle --- 192.168.2.13:7545 ganache
 // setup drizzle
 const drizzle = new Drizzle(options);
 
