@@ -42,25 +42,73 @@ class ManufacturingShow extends React.Component {
     // if it exists, then we display its value
     return (
       <div className="container">
+      <div className="card" >
+      <div className="card-header">
+        Input your Manufacturing.
+      </div>
         <table className="table">
-          <thead>
-          
+          <thead>          
             <tr>
-              <th scope="col">Controllers</th>
-              <th scope="col">Shafts</th>
-              <th scope="col">Doors</th>
-              <th scope="col">Buttons</th>
+              <th scope="col">Product</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Check</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td>Aluminum Bars:</td>
               <td>{aluminumBars && aluminumBars.value}</td>
+              <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></td>
+            </tr>
+            <tr>
+              <td>Aluminum Sheets:</td>
               <td>{aluminumSheets && aluminumSheets.value}</td>
-              <td>{aluminumBars && aluminumBars.value}</td>
+              <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></td>
+            </tr>
+            <tr>
+              <td>Stainless Steel Sheets:</td>
+              <td>{stainlessSteelSheets && stainlessSteelSheets.value}</td>
+              <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></td>
+            </tr>            
+            <tr>
+              <td>Springs:</td>
+              <td>{springs && springs.value}</td>
+              <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></td>
+            </tr>
+            <tr>
+              <td>Rubber Bands:</td>
+              <td>{rubberBands && rubberBands.value}</td>
+              <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></td>
+            </tr>
+            <tr>
+              <td>Rubber Bumpers:</td>
               <td>{aluminumSheets && aluminumSheets.value}</td>
+              <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></td>
+            </tr>
+            <tr>
+              <td>Lightin Led:</td>
+              <td>{lightinLed && lightinLed.value}</td>
+              <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></td>
+            </tr>
+            <tr>
+              <td>Springs:</td>
+              <td>{aluminumSheets && aluminumSheets.value}</td>
+              <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></td>
+            </tr>
+            <tr>
+              <td>Buttons:</td>
+              <td>{aluminumSheets && aluminumSheets.value}</td>
+              <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></td>
+            </tr>
+            <tr>
+              <td>Display Panel:</td>
+              <td>{displayPanel && displayPanel.value}</td>
+              <td><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/></td>
             </tr>
           </tbody>
         </table>
+        <button className="btn btn-primary" type="submit">Submit</button>
+      </div>
       </div>
 		);
   }

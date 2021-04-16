@@ -1,6 +1,6 @@
 import React from "react";
 
-class ManufacturingInput extends React.Component {
+class QualitySHInput extends React.Component {
   state = { stackId: null };
 
   handleKeyDown (e, methodName) {
@@ -34,13 +34,13 @@ class ManufacturingInput extends React.Component {
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
             <div className="row">
-              <div className="col-6">Aluminum Bars: </div>{" "}
+              <div className="col-6">Door Test has passed: </div>{" "}
               <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setAluminumBars')} />
             </div>
           </li>
           <li className="list-group-item">
             <div className="row">
-              <div className="col-6">Aluminum Sheets: </div>{" "}
+              <div className="col-6">Cable Test has passed: </div>{" "}
               <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setAluminumSheets')} />
             </div>
           </li>
@@ -95,7 +95,7 @@ class ManufacturingInput extends React.Component {
 }
 
 
-export default ManufacturingInput;
+export default QualitySHInput;
 
 
  

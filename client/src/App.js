@@ -5,6 +5,8 @@ import MaterialsProviderShow from "./controllers/MaterialsProviderShow";
 import MaterialsProviderInput from "./controllers/MaterialsProviderInput";
 import ManufacturingShow from "./controllers/ManufacturingShow.js";
 import ManufacturingInput from "./controllers/ManufacturingInput.js";
+import QualitySHInput from "./controllers/QualitySHInput.js";
+
 import "./App.css";
 
 
@@ -51,6 +53,7 @@ class App extends Component {
 		document.head.appendChild(script3);		
   }
 
+
   componentWillUnmount() {
     this.unsubscribe();
   }
@@ -60,29 +63,24 @@ class App extends Component {
     return (			
     <div>
       <nav className="navbarlg">
-        <h1 className ="display-3">ROCKET ELEVATORS</h1>
+        <h1 className ="display-1">ROCKET ELEVATORS</h1>
       </nav>
       <div className="App">
         <ProjetOfficeInput
           drizzle={this.props.drizzle}
           drizzleState={this.state.drizzleState}
         />
-        <ProjectOfficeShow
-          drizzle={this.props.drizzle}
-          drizzleState={this.state.drizzleState}
-        /> 
+        
         <MaterialsProviderInput
           drizzle={this.props.drizzle}
           drizzleState={this.state.drizzleState}
-        />    
-       <MaterialsProviderShow
-          drizzle={this.props.drizzle}
-          drizzleState={this.state.drizzleState}
-        />   
-        <ManufacturingInput
+        />
+
+        <QualitySHInput
           drizzle={this.props.drizzle}
           drizzleState={this.state.drizzleState}
         />
+
       </div>
     </div> 
     );

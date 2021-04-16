@@ -34,32 +34,56 @@ class MaterialsProviderInput extends React.Component {
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
             <div className="row">
-              <div className="col-6">Controllers: </div>{" "}
-              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setControllers')} />
+              <div className="col-6">Aluminum bars: </div>{" "}
+              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setAluminumbBars')} />
             </div>
           </li>
           <li className="list-group-item">
             <div className="row">
-              <div className="col-6">Shafts: </div>{" "}
-              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setShafts')} />
+              <div className="col-6">Aluminum Sheets: </div>{" "}
+              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setAluminumSheets')} />
             </div>
           </li>
           <li className="list-group-item">
             <div className="row">
-              <div className="col-6">Doors: </div>{" "}
-              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setDoors')} />
+              <div className="col-6">Stainless steel sheets: </div>{" "}
+              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setStainlessSteelSheets')} />
             </div>
           </li>
           <li className="list-group-item">
             <div className="row">
-              <div className="col-6">Buttons: </div>{" "}
-              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setButtons')} />
+              <div className="col-6">Springs: </div>{" "}
+              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setSprings')} />
             </div>
           </li>
           <li className="list-group-item">
             <div className="row">
-              <div className="col-6">Display: </div>{" "}
-              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setDisplay')} />
+              <div className="col-6">Rubber Bands: </div>{" "}
+              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setRubberBands')} />
+            </div>
+          </li>
+          <li className="list-group-item">
+            <div className="row">
+              <div className="col-6">Rubber Bumpers: </div>{" "}
+              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setRubberBumpers')} />
+            </div>
+          </li>
+          <li className="list-group-item">
+            <div className="row">
+              <div className="col-6">Lightin Led: </div>{" "}
+              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setLightinLed')} />
+            </div>
+          </li>
+          <li className="list-group-item">
+            <div className="row">
+              <div className="col-6">displayPanel: </div>{" "}
+              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setDisplayPanel')} />
+            </div>
+          </li>
+          <li className="list-group-item">
+            <div className="row">
+              <div className="col-6">manufacturingButtons: </div>{" "}
+              <input type="text" onKeyDown={(e) => this.handleKeyDown(e, 'setManufacturingButtons')} />
             </div>
           </li>
         </ul>
@@ -71,3 +95,15 @@ class MaterialsProviderInput extends React.Component {
 }
 
 export default MaterialsProviderInput;
+
+
+ 
+// aluminumbBars
+// aluminumSheets
+// stainlessSteelSheets
+// springs
+// rubberBands
+// rubberBumpers
+// lightinLed
+// displayPanel
+// manufacturingButtons
